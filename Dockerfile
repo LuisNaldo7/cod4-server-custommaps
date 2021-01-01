@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 # install dependencies
 RUN dpkg --add-architecture i386
-RUN apt-get update 
+RUN apt-get update
 RUN apt-get install -y libstdc++6:i386 libselinux1:i386
 
 # set workdir
