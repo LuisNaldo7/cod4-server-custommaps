@@ -3,6 +3,8 @@
 
 ## Run in Docker
 
+Add game files (directories /main & /zone) to repository root dir.
+
 build image
 
     docker build -t luisnaldo7/cod4-server:latest .
