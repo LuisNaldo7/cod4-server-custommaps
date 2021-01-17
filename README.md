@@ -12,8 +12,12 @@ build image
 
 execute image
 
-    docker run -d -p 28960:28960 -e SERVER_CONFIG=<server_config>.cfg --rm --network=host --name cod4-server-custommaps-<server_name> luisnaldo7/cod4-server-custommaps:latest
+    docker run -d -p 28960:28960 -e SERVER_CONFIG=mp_home_mixed.cfg --network=host --rm --name cod4-server-custommaps-mixed luisnaldo7/cod4-server-custommaps:latest
+    docker run -d -p 28961:28960 -e SERVER_CONFIG=mp_home_only.cfg --network=host --rm --name cod4-server-custommaps-only luisnaldo7/cod4-server-custommaps:latest
+    docker run -d -p 28962:28960 -e SERVER_CONFIG=mp_home_only_sudden_death.cfg --network=host --rm --name cod4-server-custommaps-only-sudden-death luisnaldo7/cod4-server-custommaps:latest
 
 run container on boot
 
-    docker run -d -p 28960:28960 -e SERVER_CONFIG=<server_config>.cfg --restart always --network=host --name cod4-server-custommaps-<server_name> luisnaldo7/cod4-server-custommaps:latest
+    docker run -d -p 28960:28960 -e SERVER_CONFIG=mp_home_mixed.cfg --network=host --restart always --name cod4-server-custommaps-mixed luisnaldo7/cod4-server-custommaps:latest
+    docker run -d -p 28961:28960 -e SERVER_CONFIG=mp_home_only.cfg --network=host --restart always --name cod4-server-custommaps-only luisnaldo7/cod4-server-custommaps:latest
+    docker run -d -p 28962:28960 -e SERVER_CONFIG=mp_home_only_sudden_death.cfg --network=host --restart always --name cod4-server-custommaps-only-sudden-death luisnaldo7/cod4-server-custommaps:latest
