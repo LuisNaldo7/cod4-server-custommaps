@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 
+ENV SERVER_CONFIG="mp_home_only.cfg"
+
 # install dependencies
 RUN dpkg --add-architecture i386
 RUN apt-get update
